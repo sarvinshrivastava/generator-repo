@@ -1,0 +1,17 @@
+name: "Podcast Generator"
+description: "Generate a podcast feed from a directory of audio files"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  color: "blue"
+  icon: "git-branch"
+inputs:
+  email:
+    description: "Email address"
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: "Name"
+    required: true
+    default: ${{ github.actor }}
